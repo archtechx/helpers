@@ -36,13 +36,6 @@ else
     esac
 fi
 
-if (./vendor/bin/phpstan analyse > /dev/null 2>/dev/null); then
-    echo '✅ PHPStan OK'
-else
-    echo '❌ PHPStan FAIL'
-    offer_run './vendor/bin/phpstan analyse'
-fi
-
 if (./vendor/bin/pest > /dev/null 2>/dev/null); then
     echo '✅ PEST OK'
 else
