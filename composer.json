@@ -1,6 +1,6 @@
 {
-    "name": "archtechx/replace",
-    "description": "",
+    "name": "archtechx/helpers",
+    "description": "A collection of helpers we commonly use.",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -10,13 +10,11 @@
         }
     ],
     "autoload": {
-        "psr-4": {
-            "ArchTech\\REPLACE\\": "src/"
-        }
+        "files": ["src/helpers.php"]
     },
     "autoload-dev": {
         "psr-4": {
-            "ArchTech\\REPLACE\\Tests\\": "tests/"
+            "ArchTech\\Helpers\\Tests\\": "tests/"
         }
     },
     "require": {
@@ -28,12 +26,5 @@
         "nunomaduro/larastan": "^0.6.10",
         "pestphp/pest": "^1.2",
         "pestphp/pest-plugin-laravel": "^1.0"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "ArchTech\\REPLACE\\PackageServiceProvider"
-            ]
-        }
     }
 }
