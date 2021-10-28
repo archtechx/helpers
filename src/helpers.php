@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 if (! function_exists('uses_trait')) {
     /** Check if a class or an object uses the specified trait. */
     function uses_trait(object|string $class, string $trait): bool
