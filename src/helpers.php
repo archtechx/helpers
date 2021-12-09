@@ -32,3 +32,18 @@ if (! function_exists('variadic_array')) {
         return $items;
     }
 }
+
+// todo test
+if (! function_exists('array_without')) {
+    /** Remove value(s) from an array */
+    function array_without(array $array, mixed ...$values): array
+    {
+        foreach (variadic_array($values) as $value) {
+            if (($key = array_search($value, $array)) !== false) {
+                unset($array[$key]);
+            }
+        }
+
+        return $array;
+    }
+}
