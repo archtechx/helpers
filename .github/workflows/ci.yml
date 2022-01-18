@@ -14,6 +14,13 @@ jobs:
   pest:
     name: Tests (Pest)
     runs-on: ubuntu-latest
+    laravel: [8.*, 9.*]
+    dependency-version: [prefer-lowest, prefer-stable]
+    include:
+      -   laravel: 9.*
+          testbench: 7.*
+      -   laravel: 8.*
+          testbench: 6.*
 
     steps:
     - uses: actions/checkout@v2
