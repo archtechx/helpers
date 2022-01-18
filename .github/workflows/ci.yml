@@ -24,10 +24,12 @@ jobs:
           -   laravel: 8.*
               testbench: ^6.9
 
+    name: L${{ matrix.laravel }}
+
     steps:
     - uses: actions/checkout@v2
     - name: Install composer dependencies
-      run: composer require "laravel/framework:^${{ matrix.laravel }}" "orchestra/testbench:^${{ matrix.testbench }}" --no-interaction --no-update
+      run: | composer require "laravel/framework:${{ matrix.laravel }}" "orchestra/testbench:${{ matrix.testbench }}" --no-interaction --no-update
     - name: Run tests
       run: vendor/bin/pest
 
