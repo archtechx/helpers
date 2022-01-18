@@ -12,7 +12,7 @@ on:
 
 jobs:
   pest:
-    name: Tests (Pest)
+    name: Tests (Pest) L${{ matrix.laravel }}
     runs-on: ubuntu-latest
     strategy:
       fail-fast: true
@@ -23,8 +23,6 @@ jobs:
               testbench: 7.*
           -   laravel: 8.*
               testbench: ^6.9
-
-    name: L${{ matrix.laravel }}
 
     steps:
     - uses: actions/checkout@v2
