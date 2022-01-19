@@ -18,16 +18,11 @@ jobs:
       fail-fast: true
       matrix:
         laravel: [9, 8]
-        include:
-          -   laravel: 9
-              testbench: 7.*
-          -   laravel: 8
-              testbench: ^6.9
 
     steps:
     - uses: actions/checkout@v2
     - name: Install composer dependencies
-      run: composer require "illuminate/support:^${{ matrix.laravel }}.0" "orchestra/testbench:${{ matrix.testbench }}"
+      run:  composer require "illuminate/support:^${{ matrix.laravel }}.0"
     - name: Run tests
       run: vendor/bin/pest
 
