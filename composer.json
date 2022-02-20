@@ -19,7 +19,8 @@
     },
     "require": {
         "php": "^8.0",
-        "illuminate/support": "^8.24|^9.0"
+        "illuminate/support": "^8.24|^9.0",
+        "archtechx/enums": "^0.1.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.9|^7.0",
