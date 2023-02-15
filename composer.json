@@ -18,15 +18,20 @@
         }
     },
     "require": {
-        "php": "^8.0",
-        "illuminate/support": "^8.24|^9.0",
-        "archtechx/enums": "^0.1.0"
+        "php": "^8.1",
+        "illuminate/support": "^8.24|^9.0|^10.0",
+        "archtechx/enums": "^0.3.2"
     },
     "require-dev": {
-        "orchestra/testbench": "^6.9|^7.0",
-        "pestphp/pest": "^1.2",
-        "pestphp/pest-plugin-laravel": "^1.0"
+        "orchestra/testbench": "^6.9|^7.0|^8.0",
+        "pestphp/pest": "^1.2|^2.0",
+        "pestphp/pest-plugin-laravel": "^1.0|^2.0"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
