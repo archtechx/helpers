@@ -28,5 +28,10 @@
         "pestphp/pest-plugin-laravel": "^1.0|^2.0"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
 }
